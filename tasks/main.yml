@@ -1,0 +1,8 @@
+- name: download flyway
+  get_url: url=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.2.0/flyway-commandline-4.2.0-linux-x64.tar.gz dest=/root/flyway.tar.gz
+
+- name: unpack flyway
+  unarchive: remote_src=yes src=/root/flyway.tar.gz dest=/opt
+
+- name: create a symlink
+  file: state=link src=/opt/flyway-4.2.0 dest=/opt/flyway
