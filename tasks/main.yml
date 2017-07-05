@@ -8,4 +8,4 @@
   file: state=link src=/opt/flyway-4.2.0 dest=/opt/flyway
 
 - name: put a config file
-  template: src=flyway.conf dest=/opt/flyway/conf/flyway.conf backup=yes
+  template: src=flyway.conf dest={{ flyway_config }} backup=yes
